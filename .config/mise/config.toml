@@ -1,0 +1,11 @@
+[tools]
+node = "latest"
+"ubi:rodrigodotdev/php" = "latest"
+usage = "latest"
+"ubi:composer/composer" = { version = "latest", postinstall = """
+composer_dir=$(mise where ubi:composer/composer)
+if [ -f "$composer_dir/composer.phar" ]; then
+  mv "$composer_dir/composer.phar" "$composer_dir/composer"
+fi
+""" }
+bun = "latest"
