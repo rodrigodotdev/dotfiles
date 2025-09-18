@@ -1,0 +1,13 @@
+plugins=(
+  fzf-tab
+  fzf
+  zsh-autosuggestions
+  zsh-syntax-highlighting
+  git
+)
+
+source $ZSH/oh-my-zsh.sh
+
+plugins=(... mise)
+
+zstyle ':fzf-tab:*' use-fzf-default-opts yes

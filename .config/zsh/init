@@ -1,0 +1,26 @@
+# TMUX
+if command -v tmux &> /dev/null; then
+  if [[ -z "$TMUX" ]] && [[ "$TERM_PROGRAM" != "vscode" ]]; then
+    exec tmux
+  fi
+fi
+
+# STARSHIP
+if command -v starship &> /dev/null; then
+  eval "$(starship init zsh)"
+fi
+
+# ZOXIDE
+if command -v zoxide &> /dev/null; then
+  eval "$(zoxide init zsh)"
+fi
+
+# FZF
+if command -v fzf &> /dev/null; then
+  source <(fzf --zsh)
+fi
+
+# MISE-EN-PLACE
+if command -v mise &> /dev/null; then
+  eval "$(mise activate zsh)"
+fi

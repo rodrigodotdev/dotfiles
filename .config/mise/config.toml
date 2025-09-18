@@ -1,0 +1,4 @@
+[tools]
+node = "latest"
+"ubi:rodrigodotdev/php" = "8.4.12"
+usage = "latest"
